@@ -60,6 +60,7 @@ class WalletConnectProvider implements IEthereumProvider {
         break;
     }
     if (SIGNING_METHODS.includes(args.method)) {
+      this.events.emit("message", {type: 'request'});
       return this.signer.request(args);
     }
     if (typeof this.http === "undefined") {
