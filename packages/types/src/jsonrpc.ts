@@ -1,4 +1,4 @@
-import { IClientMeta, IConnector } from "./protocol";
+import { IClientMeta, IConnector, IWalletConnectSession } from "./protocol";
 import { IEvents } from "./events";
 import { IQRCodeModal, IQRCodeModalOptions } from "./qrcode";
 
@@ -84,6 +84,7 @@ export interface IWCRpcConnectionOptions {
   signingMethods?: string[];
   qrcodeModalOptions?: IQRCodeModalOptions;
   clientMeta?: IClientMeta;
+  session: IWalletConnectSession;
 }
 
 export interface IWCEthRpcConnectionOptions extends IWCRpcConnectionOptions {

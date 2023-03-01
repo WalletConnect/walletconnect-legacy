@@ -114,6 +114,7 @@ export class SignerConnection extends IJsonRpcConnection {
       storageId: opts?.storageId,
       signingMethods: opts?.signingMethods,
       clientMeta: opts?.clientMeta,
+      session: opts?.session,
     };
     this.wc =
       typeof opts?.connector !== "undefined" ? opts.connector : new WalletConnect(connectorOpts);
